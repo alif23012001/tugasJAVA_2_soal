@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChatBox</title>
+    <style>
+      .sendBtn1,
+      .sendBtn2 {
+        background-color: rgb(108, 224, 0);
+        height: 45px;
+        width: 80px;
+        display: table-cell;
+        align-content: center;
+        border: none;
+        cursor: pointer;
+        float: right;
+      }
+
+      .message1,
+      .message2 {
+        display: table-cell;
+        height: 40px;
+        border: none;
+        width: 90%;
+      }
+
+      .container {
+        display: table;
+        padding: 5px;
+        width: 400px;
+        float: left;
+      }
+
+      .messageS1,
+      .messageS2 {
+        border: 1px solid;
+        height: 300px;
+        width: 406px;
+        margin-bottom: 10px;
+        overflow: scroll;
+        scroll-behavior: auto;
+      }
+
+      .fa {
+        font-size: 18px;
+      }
+
+      input[type="text"] {
+        padding: 10px;
+        width: 300px;
+        height: 22px;
+        border: 1px solid;
+        font-size: 16px;
+      }
+      input[type="text"]:disabled {
+        background-color: rgb(0, 214, 230);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="padding: 10px">
+      <p>Admin</p>
+      <div class="messageS1" id="messageS1"></div>
+      <form onsubmit="sendMessage1()" id="chatForm1">
+        <input type="text" name="message1" id="message1" class="message1" />
+        <button
+          class="sendBtn1"
+          style="color: rgb(0, 0, 0); font-weight: bold"
+        >
+          Kirim
+        </button>
+      </form>
+    </div>
+
+    <div class="container" style="padding: 10px">
+      <p>Customer</p>
+      <div class="messageS2" id="messageS2"></div>
+
+      <form onsubmit="sendMessage2()" id="chatForm2">
+        <input type="text" name="message2" id="message2" class="message2" />
+        <button
+          class="sendBtn2"
+          style="color: rgb(0, 0, 0); font-weight: bold"
+        >
+          Kirim
+        </button>
+      </form>
+    </div>
+  </body>
+
+  <script src="/tugas1.js"></script>
+</html>
